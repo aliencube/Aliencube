@@ -4,7 +4,7 @@ using System.Data.Entity.ModelConfiguration;
 namespace Aliencube.DataEntities.TypeConfigurations
 {
     /// <summary>
-    /// This represents the configuration entity for the page type entity.
+    /// This represents the configuration entity for the content type entity.
     /// </summary>
     public class ContentTypeConfiguration : EntityTypeConfiguration<Content>
     {
@@ -21,6 +21,7 @@ namespace Aliencube.DataEntities.TypeConfigurations
             this.Property(p => p.ContentId).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
 
             //this.Property(p => p.PageId).IsRequired();
+
             this.Property(p => p.ContentTitle).IsRequired().HasMaxLength(256);
             this.Property(p => p.ContentBody).IsRequired();
             this.Property(p => p.VersionNumber).IsRequired();

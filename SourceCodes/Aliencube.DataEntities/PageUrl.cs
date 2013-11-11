@@ -7,6 +7,8 @@ namespace Aliencube.DataEntities
     /// </summary>
     public class PageUrl
     {
+        #region Properties
+
         /// <summary>
         /// Gets or sets the page URL ID.
         /// </summary>
@@ -23,7 +25,7 @@ namespace Aliencube.DataEntities
         public string Slug { get; set; }
 
         /// <summary>
-        /// Gets or sets the value that specifies whether this is the main URL or not. 
+        /// Gets or sets the value that specifies whether this is the main URL or not.
         /// </summary>
         public bool IsMainUrl { get; set; }
 
@@ -46,5 +48,16 @@ namespace Aliencube.DataEntities
         /// Gets or sets the user ID that has updated the page URL.
         /// </summary>
         public int UpdatedBy { get; set; }
+
+        #endregion Properties
+
+        #region Relations
+
+        /// <summary>
+        /// Gets or sets the page instance.
+        /// </summary>
+        public virtual Page Page { get; set; }
+
+        #endregion Relations
     }
 }

@@ -7,6 +7,8 @@ namespace Aliencube.DataEntities
     /// </summary>
     public class UserRole
     {
+        #region Properties
+
         /// <summary>
         /// Gets or sets the user role ID.
         /// </summary>
@@ -36,5 +38,21 @@ namespace Aliencube.DataEntities
         /// Gets or sets the user ID that has assigned the user to the role.
         /// </summary>
         public int AssignedBy { get; set; }
+
+        #endregion Properties
+
+        #region Relations
+
+        /// <summary>
+        /// Gets or sets the user instance.
+        /// </summary>
+        public virtual User User { get; set; }
+
+        /// <summary>
+        /// Gets or sets the role instance.
+        /// </summary>
+        public virtual Role Role { get; set; }
+
+        #endregion Relations
     }
 }

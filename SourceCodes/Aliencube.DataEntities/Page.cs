@@ -55,6 +55,11 @@ namespace Aliencube.DataEntities
         /// </summary>
         public virtual ICollection<Content> Contents { get; set; }
 
+        /// <summary>
+        /// Gets or sets the list of page URL instances.
+        /// </summary>
+        public virtual ICollection<PageUrl> PageUrls { get; set; }
+
         #endregion Relations
     }
 }

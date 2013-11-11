@@ -55,6 +55,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Role.cs" />
     <Compile Include="TypeConfigurations\ContentTypeConfiguration.cs" />
+    <Compile Include="TypeConfigurations\UserTypeConfiguration.cs" />
+    <Compile Include="TypeConfigurations\RoleTypeConfiguration.cs" />
+    <Compile Include="TypeConfigurations\PageUrlTypeConfiguration.cs" />
+    <Compile Include="TypeConfigurations\UserRoleTypeConfiguration.cs" />
     <Compile Include="TypeConfigurations\PageTypeConfiguration.cs" />
     <Compile Include="User.cs" />
     <Compile Include="UserRole.cs" />

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Aliencube.DataEntities
 {
@@ -7,6 +8,8 @@ namespace Aliencube.DataEntities
     /// </summary>
     public class User
     {
+        #region Properties
+
         /// <summary>
         /// Gets or sets the user ID.
         /// </summary>
@@ -76,5 +79,16 @@ namespace Aliencube.DataEntities
         /// Gets or sets the user ID that has suspended the user.
         /// </summary>
         public int? SuspendedBy { get; set; }
+
+        #endregion Properties
+
+        #region Relations
+
+        /// <summary>
+        /// Gets or sets the list of user-role instances.
+        /// </summary>
+        public virtual ICollection<UserRole> UserRoles { get; set; }
+
+        #endregion Relations
     }
 }

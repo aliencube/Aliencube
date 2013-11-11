@@ -20,7 +20,7 @@ namespace Aliencube.DataEntities.TypeConfigurations
             //  Sets the auto increment and identity on PageId.
             this.Property(p => p.PageId).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
 
-            this.Property(p => p.PageHierarchy).IsRequired();
+            this.Property(p => p.PageHierarchy).IsRequired().HasMaxLength(256);
             this.Property(p => p.IsPublished).IsRequired();
 
             this.Property(p => p.DatePublished).IsOptional();

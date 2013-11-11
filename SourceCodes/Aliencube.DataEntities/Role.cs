@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Aliencube.DataEntities
 {
@@ -7,6 +8,8 @@ namespace Aliencube.DataEntities
     /// </summary>
     public class Role
     {
+        #region Properties
+
         /// <summary>
         /// Gets or sets the role ID.
         /// </summary>
@@ -46,5 +49,16 @@ namespace Aliencube.DataEntities
         /// Gets or sets the user ID that has updated the role.
         /// </summary>
         public int UpdatedBy { get; set; }
+
+        #endregion Properties
+
+        #region Relations
+
+        /// <summary>
+        /// Gets or sets the list of user-role instances.
+        /// </summary>
+        public virtual ICollection<UserRole> UserRoles { get; set; }
+
+        #endregion Relations
     }
 }
