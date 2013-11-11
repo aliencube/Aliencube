@@ -7,6 +7,8 @@ namespace Aliencube.DataEntities
     /// </summary>
     public class Content
     {
+        #region Properties
+
         /// <summary>
         /// Gets or sets the content ID.
         /// </summary>
@@ -41,5 +43,16 @@ namespace Aliencube.DataEntities
         /// Gets or sets the user ID that has created the content.
         /// </summary>
         public int CreatedBy { get; set; }
+
+        #endregion Properties
+
+        #region Relations
+
+        /// <summary>
+        /// Gets or sets the page instance.
+        /// </summary>
+        public virtual Page Page { get; set; }
+
+        #endregion Relations
     }
 }

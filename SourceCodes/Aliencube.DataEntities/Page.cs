@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Aliencube.DataEntities
 {
@@ -7,6 +9,8 @@ namespace Aliencube.DataEntities
     /// </summary>
     public class Page
     {
+        #region Properties
+
         /// <summary>
         /// Gets or sets the page ID.
         /// </summary>
@@ -41,5 +45,16 @@ namespace Aliencube.DataEntities
         /// Gets or sets the user ID that has updated the page.
         /// </summary>
         public int? UpdatedBy { get; set; }
+
+        #endregion Properties
+
+        #region Relations
+
+        /// <summary>
+        /// Gets or sets the list of content instances.
+        /// </summary>
+        public virtual ICollection<Content> Contents { get; set; }
+
+        #endregion Relations
     }
 }
