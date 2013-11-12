@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Aliencube.DataAccessFramework.Interfaces;
+using Aliencube.DataEntities;
+using System;
 using System.Data.Common;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration;
 using System.Data.Entity.ModelConfiguration.Configuration;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Aliencube.DataAccessFramework.Interfaces;
 
 namespace Aliencube.DataAccessFramework
 {
@@ -42,6 +40,40 @@ namespace Aliencube.DataAccessFramework
         }
 
         #endregion Constructors
+
+        #region Properties
+
+        /// <summary>
+        /// Gets or sets a set of contents.
+        /// </summary>
+        public DbSet<Content> Contents { get; set; }
+
+        /// <summary>
+        /// Gets or sets a set of pages.
+        /// </summary>
+        public DbSet<Page> Pages { get; set; }
+
+        /// <summary>
+        /// Gets or sets a set of page URLs.
+        /// </summary>
+        public DbSet<PageUrl> PageUrls { get; set; }
+
+        /// <summary>
+        /// Gets or sets a set of roles.
+        /// </summary>
+        public DbSet<Role> Roles { get; set; }
+
+        /// <summary>
+        /// Gets or sets a set of users.
+        /// </summary>
+        public DbSet<User> Users { get; set; }
+
+        /// <summary>
+        /// Gets or sets a set of user roles.
+        /// </summary>
+        public DbSet<UserRole> UserRoles { get; set; }
+
+        #endregion Properties
 
         #region Methods
 

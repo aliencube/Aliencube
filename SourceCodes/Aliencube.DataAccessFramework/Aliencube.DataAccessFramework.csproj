@@ -51,6 +51,7 @@
     </Compile>
     <Compile Include="AliencubeDataContext.cs" />
     <Compile Include="Interfaces\IAliencubeDataContext.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
