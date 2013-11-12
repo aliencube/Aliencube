@@ -2,13 +2,29 @@ using System.Data.Entity.Migrations;
 
 namespace Aliencube.DataAccessFramework.Migrations
 {
-    internal sealed class Configuration : DbMigrationsConfiguration<AliencubeDataContext>
+    /// <summary>
+    /// This represents the configuration entity relating to the use of migrations for a given model.
+    /// </summary>
+    public class Configuration : DbMigrationsConfiguration<AliencubeDataContext>
     {
+        #region Constructors
+
+        /// <summary>
+        /// Initialises a new instance of the Configuration class.
+        /// </summary>
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
         }
 
+        #endregion Constructors
+
+        #region Methods
+
+        /// <summary>
+        /// Runs after upgrading to the latest migration to allow seed data to be updated.
+        /// </summary>
+        /// <param name="context">Database context instance to be used for updating seed data.</param>
         protected override void Seed(AliencubeDataContext context)
         {
             //  This method will be called after migrating to the latest version.
@@ -24,5 +40,7 @@ namespace Aliencube.DataAccessFramework.Migrations
             //    );
             //
         }
+
+        #endregion Methods
     }
 }
