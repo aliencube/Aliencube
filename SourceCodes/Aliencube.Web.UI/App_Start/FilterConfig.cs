@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace Aliencube.Web.UI
+namespace Aliencube.Web.UI.App_Start
 {
     public class FilterConfig
     {
