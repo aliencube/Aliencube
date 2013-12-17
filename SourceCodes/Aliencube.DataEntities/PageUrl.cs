@@ -40,7 +40,7 @@ namespace Aliencube.DataEntities
         public DateTime DateCreated { get; set; }
 
         /// <summary>
-        /// Gets or sets the user Id that creates the page URL.
+        /// Gets or sets the user Id that has created the page URL.
         /// </summary>
         public int CreatedBy { get; set; }
 
@@ -50,7 +50,7 @@ namespace Aliencube.DataEntities
         public DateTime DateUpdated { get; set; }
 
         /// <summary>
-        /// Gets or sets the user Id that updates the page URL.
+        /// Gets or sets the user Id that has updated the page URL.
         /// </summary>
         public int UpdatedBy { get; set; }
 

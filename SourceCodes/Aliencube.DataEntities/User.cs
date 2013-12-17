@@ -11,7 +11,7 @@ namespace Aliencube.DataEntities
         #region Properties
 
         /// <summary>
-        /// Gets or sets the user ID.
+        /// Gets or sets the unique Id representing a user.
         /// </summary>
         public int UserId { get; set; }
 
@@ -66,7 +66,7 @@ namespace Aliencube.DataEntities
         public int? VerifiedBy { get; set; }
 
         /// <summary>
-        /// Gets or sets the value that specifies whether the user is suspended or not.
+        /// Gets or sets the value that specifies whether the user has been suspended or not.
         /// </summary>
         public bool IsSuspended { get; set; }
 

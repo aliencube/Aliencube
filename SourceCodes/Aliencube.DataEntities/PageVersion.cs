@@ -39,7 +39,7 @@ namespace Aliencube.DataEntities
         public DateTime DateCreated { get; set; }
 
         /// <summary>
-        /// Gets or sets the user Id that creates the page.
+        /// Gets or sets the user Id that has created the page.
         /// </summary>
         public int CreatedBy { get; set; }
 
@@ -49,7 +49,7 @@ namespace Aliencube.DataEntities
         public DateTime? DatePublished { get; set; }
 
         /// <summary>
-        /// Gets or sets the user Id that publishes the page.
+        /// Gets or sets the user Id that has published the page.
         /// </summary>
         public int? PublishedBy { get; set; }
 

@@ -64,7 +64,7 @@ namespace Aliencube.DataEntities
         public DateTime DateCreated { get; set; }
 
         /// <summary>
-        /// Gets or sets the user Id that creates the element schema.
+        /// Gets or sets the user Id that has created the element schema.
         /// </summary>
         public int CreatedBy { get; set; }
 
@@ -74,7 +74,7 @@ namespace Aliencube.DataEntities
         public DateTime DateUpdated { get; set; }
 
         /// <summary>
-        /// Gets or sets the user Id that updates the element schema.
+        /// Gets or sets the user Id that has updated the element schema.
         /// </summary>
         public int UpdatedBy { get; set; }
 

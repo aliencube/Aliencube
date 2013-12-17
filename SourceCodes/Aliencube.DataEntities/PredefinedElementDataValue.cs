@@ -44,7 +44,7 @@ namespace Aliencube.DataEntities
         public DateTime DateCreated { get; set; }
 
         /// <summary>
-        /// Gets or sets the user Id that creates the pre-defined element data value.
+        /// Gets or sets the user Id that has created the pre-defined element data value.
         /// </summary>
         public int CreatedBy { get; set; }
 
@@ -54,7 +54,7 @@ namespace Aliencube.DataEntities
         public DateTime DateUpdated { get; set; }
 
         /// <summary>
-        /// Gets or sets the user Id that updates the pre-defined element data value.
+        /// Gets or sets the user Id that has updated the pre-defined element data value.
         /// </summary>
         public int UpdatedBy { get; set; }
 
