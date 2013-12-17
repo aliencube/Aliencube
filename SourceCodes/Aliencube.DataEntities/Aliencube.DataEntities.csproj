@@ -50,8 +50,16 @@
       <Link>Properties\CommonAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="Content.cs" />
+    <Compile Include="ElementDataType.cs" />
+    <Compile Include="ElementGroup.cs" />
+    <Compile Include="ElementSchema.cs" />
     <Compile Include="Page.cs" />
+    <Compile Include="PageContent.cs" />
+    <Compile Include="PageElement.cs" />
+    <Compile Include="PageSchema.cs" />
     <Compile Include="PageUrl.cs" />
+    <Compile Include="PageVersion.cs" />
+    <Compile Include="PredefinedElementDataValue.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Role.cs" />
     <Compile Include="TypeConfigurations\ContentTypeConfiguration.cs" />

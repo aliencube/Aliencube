@@ -10,17 +10,17 @@ namespace Aliencube.DataEntities
         #region Properties
 
         /// <summary>
-        /// Gets or sets the page URL ID.
+        /// Gets or sets the unique Id representing a page URL.
         /// </summary>
         public int PageUrlId { get; set; }
 
         /// <summary>
-        /// Gets or sets the page ID that holds the page URL.
+        /// Gets or sets the page Id which this belongs to.
         /// </summary>
         public int PageId { get; set; }
 
         /// <summary>
-        /// Gets or sets the URL of the page.
+        /// Gets or sets the page slug.
         /// </summary>
         public string Slug { get; set; }
 
@@ -30,12 +30,17 @@ namespace Aliencube.DataEntities
         public bool IsMainUrl { get; set; }
 
         /// <summary>
-        /// Gets or sets the date when the URL is created.
+        /// Gets or sets the value that specifies whether this is an active URL or not.
+        /// </summary>
+        public bool IsActiveUrl { get; set; }
+
+        /// <summary>
+        /// Gets or sets the date when the page URL is created.
         /// </summary>
         public DateTime DateCreated { get; set; }
 
         /// <summary>
-        /// Gets or sets the user ID that has created the URL.
+        /// Gets or sets the user Id that creates the page URL.
         /// </summary>
         public int CreatedBy { get; set; }
 
@@ -45,7 +50,7 @@ namespace Aliencube.DataEntities
         public DateTime DateUpdated { get; set; }
 
         /// <summary>
-        /// Gets or sets the user ID that has updated the page URL.
+        /// Gets or sets the user Id that updates the page URL.
         /// </summary>
         public int UpdatedBy { get; set; }
 
