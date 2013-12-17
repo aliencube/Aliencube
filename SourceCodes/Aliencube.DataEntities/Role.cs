@@ -6,24 +6,29 @@ namespace Aliencube.DataEntities
     /// <summary>
     /// This represents the entity of a role for a user.
     /// </summary>
-    public class Role
+    public partial class Role
     {
         #region Properties
 
         /// <summary>
-        /// Gets or sets the role ID.
+        /// Gets or sets the unique Id representing a role.
         /// </summary>
         public int RoleId { get; set; }
 
         /// <summary>
-        /// Gets or sets the role name.
+        /// Gets or sets the name to be displayed.
         /// </summary>
-        public string RoleName { get; set; }
+        public string DisplayName { get; set; }
 
         /// <summary>
-        /// Gets or sets the role description.
+        /// Gets or sets the name when to generate a strongly typed object as a property.
         /// </summary>
-        public string RoleDescription { get; set; }
+        public string StronglyTypedName { get; set; }
+
+        /// <summary>
+        /// Gets or sets the description of the role.
+        /// </summary>
+        public string Description { get; set; }
 
         /// <summary>
         /// Gets or sets the value that specifies whether the role is active or not.
@@ -36,7 +41,7 @@ namespace Aliencube.DataEntities
         public DateTime DateCreated { get; set; }
 
         /// <summary>
-        /// Gets or sets the user ID that has created the role.
+        /// Gets or sets the user Id that has created the role.
         /// </summary>
         public int CreatedBy { get; set; }
 
@@ -46,7 +51,7 @@ namespace Aliencube.DataEntities
         public DateTime DateUpdated { get; set; }
 
         /// <summary>
-        /// Gets or sets the user ID that has updated the role.
+        /// Gets or sets the user Id that has updated the role.
         /// </summary>
         public int UpdatedBy { get; set; }
 

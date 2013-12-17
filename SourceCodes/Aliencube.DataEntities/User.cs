@@ -65,21 +65,6 @@ namespace Aliencube.DataEntities
         /// </summary>
         public int? VerifiedBy { get; set; }
 
-        /// <summary>
-        /// Gets or sets the value that specifies whether the user has been suspended or not.
-        /// </summary>
-        public bool IsSuspended { get; set; }
-
-        /// <summary>
-        /// Gets or sets the data when the user is suspended.
-        /// </summary>
-        public DateTime? DateSuspended { get; set; }
-
-        /// <summary>
-        /// Gets or sets the user ID that has suspended the user.
-        /// </summary>
-        public int? SuspendedBy { get; set; }
-
         #endregion Properties
 
         #region Relations

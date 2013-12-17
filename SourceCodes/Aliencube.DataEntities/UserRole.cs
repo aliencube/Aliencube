@@ -5,7 +5,7 @@ namespace Aliencube.DataEntities
     /// <summary>
     /// This represents the entity of a role assigned to a user.
     /// </summary>
-    public class UserRole
+    public partial class UserRole
     {
         #region Properties
 
@@ -15,12 +15,12 @@ namespace Aliencube.DataEntities
         public int UserRoleId { get; set; }
 
         /// <summary>
-        /// Gets or sets the user ID that the user role belongs to.
+        /// Gets or sets the user Id which this belongs to.
         /// </summary>
         public int UserId { get; set; }
 
         /// <summary>
-        /// Gets or sets the role ID that the user role belongs to.
+        /// Gets or sets the role Id which this belongs to.
         /// </summary>
         public int RoleId { get; set; }
 
@@ -30,14 +30,14 @@ namespace Aliencube.DataEntities
         public bool IsGranted { get; set; }
 
         /// <summary>
-        /// Gets or sets the date when the role is assigned to the user.
+        /// Gets or sets the date when the role is granted to the user.
         /// </summary>
-        public DateTime DateAssigned { get; set; }
+        public DateTime DateGranted { get; set; }
 
         /// <summary>
-        /// Gets or sets the user ID that has assigned the user to the role.
+        /// Gets or sets the user Id that has granted the user to the role.
         /// </summary>
-        public int AssignedBy { get; set; }
+        public int GrantedBy { get; set; }
 
         #endregion Properties
 
