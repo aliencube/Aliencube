@@ -3,16 +3,16 @@
 namespace Aliencube.DataEntities
 {
     /// <summary>
-    /// This represents the entity of a role assigned to a user.
+    /// This represents the entity of a group assigned to a user.
     /// </summary>
-    public partial class UserRole
+    public partial class UserGroup
     {
         #region Properties
 
         /// <summary>
-        /// Gets or sets the user role ID.
+        /// Gets or sets the user group ID.
         /// </summary>
-        public int UserRoleId { get; set; }
+        public int UserGroupId { get; set; }
 
         /// <summary>
         /// Gets or sets the user Id which this belongs to.
@@ -20,22 +20,22 @@ namespace Aliencube.DataEntities
         public int UserId { get; set; }
 
         /// <summary>
-        /// Gets or sets the role Id which this belongs to.
+        /// Gets or sets the group Id which this belongs to.
         /// </summary>
-        public int RoleId { get; set; }
+        public int GroupId { get; set; }
 
         /// <summary>
-        /// Gets or sets the value that specifies whether the user role is granted or not.
+        /// Gets or sets the value that specifies whether the user group is granted or not.
         /// </summary>
         public bool IsGranted { get; set; }
 
         /// <summary>
-        /// Gets or sets the date when the role is granted to the user.
+        /// Gets or sets the date when the group is granted to the user.
         /// </summary>
         public DateTime DateGranted { get; set; }
 
         /// <summary>
-        /// Gets or sets the user Id that has granted the user to the role.
+        /// Gets or sets the user Id that has granted the user to the group.
         /// </summary>
         public int GrantedBy { get; set; }
 
@@ -49,9 +49,9 @@ namespace Aliencube.DataEntities
         public virtual User User { get; set; }
 
         /// <summary>
-        /// Gets or sets the role instance.
+        /// Gets or sets the group instance.
         /// </summary>
-        public virtual Role Role { get; set; }
+        public virtual Group Group { get; set; }
 
         /// <summary>
         /// Gets or sets the user instance that has granted this.

@@ -36,24 +36,24 @@ namespace Aliencube.DataEntities
         /// </summary>
         public int SortOrder { get; set; }
 
-        /// <summary>
-        /// Gets or sets the value that specifies whether the page is published or not.
-        /// </summary>
-        public bool IsPublished { get; set; }
-
         #endregion Properties
 
         #region Relations
 
         /// <summary>
-        /// Gets or sets the list of content instances.
+        /// Gets or sets the page schema instance.
         /// </summary>
-        public virtual ICollection<Content> Contents { get; set; }
+        public virtual PageSchema PageSchema { get; set; }
 
         /// <summary>
         /// Gets or sets the list of page URL instances.
         /// </summary>
         public virtual ICollection<PageUrl> PageUrls { get; set; }
+
+        /// <summary>
+        /// Gets or sets the list of element schema instances.
+        /// </summary>
+        public virtual ICollection<PageVersion> PageVersions { get; set; }
 
         #endregion Relations
     }

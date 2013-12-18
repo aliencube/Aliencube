@@ -36,6 +36,12 @@ namespace Aliencube.DataEntities
         #endregion
 
         #region Relations
+
+        /// <summary>
+        /// Gets or sets the page version instance.
+        /// </summary>
+        public virtual PageVersion PageVersion { get; set; }
+
         #endregion
     }
 }

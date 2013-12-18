@@ -63,6 +63,16 @@ namespace Aliencube.DataEntities
         /// </summary>
         public virtual Page Page { get; set; }
 
+        /// <summary>
+        /// Gets or sets the user instance that has created this.
+        /// </summary>
+        public virtual User CreatedBy { get; set; }
+
+        /// <summary>
+        /// Gets or sets the user instance that has updated this.
+        /// </summary>
+        public virtual User UpdatedBy { get; set; }
+
         #endregion Relations
     }
 }

@@ -6,7 +6,7 @@ namespace Aliencube.DataEntities
     /// <summary>
     /// This represents the entity of a user.
     /// </summary>
-    public class User
+    public partial class User
     {
         #region Properties
 
@@ -70,9 +70,84 @@ namespace Aliencube.DataEntities
         #region Relations
 
         /// <summary>
+        /// Gets or sets the user instance that has created this.
+        /// </summary>
+        public virtual User CreatedBy { get; set; }
+
+        /// <summary>
+        /// Gets or sets the user instance that has updated this.
+        /// </summary>
+        public virtual User UpdatedBy { get; set; }
+
+        /// <summary>
+        /// Gets or sets the user instance that has verified this.
+        /// </summary>
+        public virtual User VerifiedBy { get; set; }
+
+        /// <summary>
+        /// Gets or sets the list of page schema instances.
+        /// </summary>
+        public virtual ICollection<PageSchema> PageSchemata { get; set; }
+
+        /// <summary>
+        /// Gets or sets the list of element group instances.
+        /// </summary>
+        public virtual ICollection<ElementGroup> ElementGroups { get; set; }
+
+        /// <summary>
+        /// Gets or sets the list of element schema instances.
+        /// </summary>
+        public virtual ICollection<ElementSchema> ElementSchemata { get; set; }
+
+        /// <summary>
+        /// Gets or sets the list of page schema instances.
+        /// </summary>
+        public virtual ICollection<ElementDataType> ElementDataTypes { get; set; }
+
+        /// <summary>
+        /// Gets or sets the list of page schema instances.
+        /// </summary>
+        public virtual ICollection<PredefinedElementDataValue> PredefinedElementDataValues { get; set; }
+
+        /// <summary>
+        /// Gets or sets the list of page version instances.
+        /// </summary>
+        public virtual ICollection<PageVersion> PageVersions { get; set; }
+
+        /// <summary>
+        /// Gets or sets the list of page URL instances.
+        /// </summary>
+        public virtual ICollection<PageUrl> PageUrls { get; set; }
+
+        /// <summary>
+        /// Gets or sets the list of user instances.
+        /// </summary>
+        public virtual ICollection<User> Users { get; set; }
+
+        /// <summary>
+        /// Gets or sets the list of group instances.
+        /// </summary>
+        public virtual ICollection<Group> Groups { get; set; }
+
+        /// <summary>
+        /// Gets or sets the list of role instances.
+        /// </summary>
+        public virtual ICollection<Role> Roles { get; set; }
+
+        /// <summary>
+        /// Gets or sets the list of user-group instances.
+        /// </summary>
+        public virtual ICollection<UserGroup> UserGroups { get; set; }
+
+        /// <summary>
         /// Gets or sets the list of user-role instances.
         /// </summary>
         public virtual ICollection<UserRole> UserRoles { get; set; }
+
+        /// <summary>
+        /// Gets or sets the list of group-role instances.
+        /// </summary>
+        public virtual ICollection<GroupRole> GroupRoles { get; set; }
 
         #endregion Relations
     }

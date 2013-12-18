@@ -21,7 +21,7 @@ namespace Aliencube.DataEntities
         /// <summary>
         /// Gets or sets the page schema Id that identifies a parent page schema this belongs to.
         /// </summary>
-        public int BasePageSchemaId { get; set; }
+        public int ParentPageSchemaId { get; set; }
 
         /// <summary>
         /// Gets or sets the name to be displayed.
@@ -61,6 +61,37 @@ namespace Aliencube.DataEntities
         #endregion
 
         #region Relations
+
+        /// <summary>
+        /// Gets or sets the parent page schema instance.
+        /// </summary>
+        public virtual PageSchema ParentPageSchema { get; set; }
+
+        /// <summary>
+        /// Gets or sets the user instance that has created this.
+        /// </summary>
+        public virtual User CreatedBy { get; set; }
+
+        /// <summary>
+        /// Gets or sets the user instance that has updated this.
+        /// </summary>
+        public virtual User UpdatedBy { get; set; }
+
+        /// <summary>
+        /// Gets or sets the list of child page schema instances.
+        /// </summary>
+        public virtual ICollection<PageSchema> ChildPageSchemata { get; set; }
+
+        /// <summary>
+        /// Gets or sets the list of element group instances.
+        /// </summary>
+        public virtual ICollection<ElementGroup> ElementGroups { get; set; }
+
+        /// <summary>
+        /// Gets or sets the list of page instances.
+        /// </summary>
+        public virtual ICollection<Page> Pages { get; set; }
+
         #endregion
     }
 }

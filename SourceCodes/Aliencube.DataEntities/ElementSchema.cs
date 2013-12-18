@@ -81,6 +81,37 @@ namespace Aliencube.DataEntities
         #endregion
 
         #region Relations
+
+        /// <summary>
+        /// Gets or sets the element group instance.
+        /// </summary>
+        public virtual ElementGroup ElementGroup { get; set; }
+
+        /// <summary>
+        /// Gets or sets the element data type instance.
+        /// </summary>
+        public virtual ElementDataType ElementDataType { get; set; }
+
+        /// <summary>
+        /// Gets or sets the user instance that has created this.
+        /// </summary>
+        public virtual User CreatedBy { get; set; }
+
+        /// <summary>
+        /// Gets or sets the user instance that has updated this.
+        /// </summary>
+        public virtual User UpdatedBy { get; set; }
+
+        /// <summary>
+        /// Gets or sets the list of page element instances.
+        /// </summary>
+        public virtual ICollection<PageElement> PageElements { get; set; }
+
+        /// <summary>
+        /// Gets or sets the list of element schema instances.
+        /// </summary>
+        public virtual ICollection<PredefinedElementDataValue> PredefinedElementDataValues { get; set; }
+
         #endregion
     }
 }

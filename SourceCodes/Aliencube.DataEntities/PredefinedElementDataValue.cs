@@ -61,6 +61,27 @@ namespace Aliencube.DataEntities
         #endregion
 
         #region Relations
+
+        /// <summary>
+        /// Gets or sets the user instance.
+        /// </summary>
+        public virtual User User { get; set; }
+
+        /// <summary>
+        /// Gets or sets the element schema instance.
+        /// </summary>
+        public virtual ElementSchema ElementSchema { get; set; }
+
+        /// <summary>
+        /// Gets or sets the user instance that has created this.
+        /// </summary>
+        public virtual User CreatedBy { get; set; }
+
+        /// <summary>
+        /// Gets or sets the user instance that has updated this.
+        /// </summary>
+        public virtual User UpdatedBy { get; set; }
+
         #endregion
     }
 }

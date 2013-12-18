@@ -3,21 +3,21 @@
 namespace Aliencube.DataEntities
 {
     /// <summary>
-    /// This represents the entity of a role assigned to a user.
+    /// This represents the entity of a role assigned to a group.
     /// </summary>
-    public partial class UserRole
+    public partial class GroupRole
     {
         #region Properties
 
         /// <summary>
-        /// Gets or sets the user role ID.
+        /// Gets or sets the group role ID.
         /// </summary>
-        public int UserRoleId { get; set; }
+        public int GroupRoleId { get; set; }
 
         /// <summary>
-        /// Gets or sets the user Id which this belongs to.
+        /// Gets or sets the group Id which this belongs to.
         /// </summary>
-        public int UserId { get; set; }
+        public int GroupId { get; set; }
 
         /// <summary>
         /// Gets or sets the role Id which this belongs to.
@@ -25,17 +25,17 @@ namespace Aliencube.DataEntities
         public int RoleId { get; set; }
 
         /// <summary>
-        /// Gets or sets the value that specifies whether the user role is granted or not.
+        /// Gets or sets the value that specifies whether the group role is granted or not.
         /// </summary>
         public bool IsGranted { get; set; }
 
         /// <summary>
-        /// Gets or sets the date when the role is granted to the user.
+        /// Gets or sets the date when the role is granted to the group.
         /// </summary>
         public DateTime DateGranted { get; set; }
 
         /// <summary>
-        /// Gets or sets the user Id that has granted the user to the role.
+        /// Gets or sets the group Id that has granted the group to the role.
         /// </summary>
         public int GrantedBy { get; set; }
 
@@ -44,9 +44,9 @@ namespace Aliencube.DataEntities
         #region Relations
 
         /// <summary>
-        /// Gets or sets the user instance.
+        /// Gets or sets the group instance.
         /// </summary>
-        public virtual User User { get; set; }
+        public virtual Group Group { get; set; }
 
         /// <summary>
         /// Gets or sets the role instance.

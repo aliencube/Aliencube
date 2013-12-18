@@ -56,6 +56,32 @@ namespace Aliencube.DataEntities
         #endregion
 
         #region Relations
+
+        /// <summary>
+        /// Gets or sets the page instance.
+        /// </summary>
+        public virtual Page Page { get; set; }
+
+        /// <summary>
+        /// Gets or sets the user instance that has created this.
+        /// </summary>
+        public virtual User CreatedBy { get; set; }
+
+        /// <summary>
+        /// Gets or sets the user instance that has updated this.
+        /// </summary>
+        public virtual User PublishedBy { get; set; }
+
+        /// <summary>
+        /// Gets or sets the page content instance.
+        /// </summary>
+        public virtual PageContent PageContent { get; set; }
+
+        /// <summary>
+        /// Gets or sets the list of page element instances.
+        /// </summary>
+        public virtual ICollection<PageElement> PageElements { get; set; }
+
         #endregion
     }
 }
