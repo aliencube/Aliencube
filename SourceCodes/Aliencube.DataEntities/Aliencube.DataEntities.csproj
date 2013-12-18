@@ -51,6 +51,8 @@
     <Compile Include="..\..\Documents\Properties\CommonAssemblyInfo.cs">
       <Link>Properties\CommonAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="TypeConfigurations\ElementDataTypeTypeConfiguration.cs" />
+    <Compile Include="TypeConfigurations\ElementGroupTypeConfiguration.cs" />
     <Compile Include="UserGroup.cs" />
     <Compile Include="GroupRole.cs" />
     <Compile Include="Group.cs" />

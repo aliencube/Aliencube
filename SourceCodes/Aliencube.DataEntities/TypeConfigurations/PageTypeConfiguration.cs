@@ -6,7 +6,7 @@ namespace Aliencube.DataEntities.TypeConfigurations
     /// <summary>
     /// This represents the configuration entity for the page type entity.
     /// </summary>
-    public class PageTypeConfiguration : EntityTypeConfiguration<Page>
+    public partial class PageTypeConfiguration : EntityTypeConfiguration<Page>
     {
         #region Constructors
 
@@ -21,12 +21,14 @@ namespace Aliencube.DataEntities.TypeConfigurations
             this.Property(p => p.PageId).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
 
             this.Property(p => p.PageHierarchy).IsRequired().HasMaxLength(256);
-            this.Property(p => p.IsPublished).IsRequired();
+            this.Property(p => p.IsRoot).IsRequired();
+            this.Property(p => p.SortOrder).IsRequired();
 
-            this.Property(p => p.DatePublished).IsOptional();
-            this.Property(p => p.PublishedBy).IsOptional();
-            this.Property(p => p.DateUpdated).IsOptional();
-            this.Property(p => p.UpdatedBy).IsOptional();
+            //  Sets the relation between Page and PageSchema.
+            this.HasRequired(p => p.PageSchema)
+                .WithMany(p => p.Pages)
+                .HasForeignKey(p => p.PageSchemaId)
+                .WillCascadeOnDelete();
         }
 
         #endregion Constructors
