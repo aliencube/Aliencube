@@ -65,12 +65,12 @@ namespace Aliencube.DataEntities
         /// <summary>
         /// Gets or sets the user instance that has created this.
         /// </summary>
-        public virtual User CreatedBy { get; set; }
+        public virtual User CreatedByUser { get; set; }
 
         /// <summary>
         /// Gets or sets the user instance that has updated this.
         /// </summary>
-        public virtual User PublishedBy { get; set; }
+        public virtual User PublishedByUser { get; set; }
 
         /// <summary>
         /// Gets or sets the page content instance.

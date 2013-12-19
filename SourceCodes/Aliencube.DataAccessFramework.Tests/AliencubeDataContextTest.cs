@@ -61,10 +61,10 @@ namespace Aliencube.DataAccessFramework.Tests
 
         [Test]
         [TestCase(0, "System", true)]
-        public void GetRole_SendRoleId_RoleSelected(int roleId, string roleName, bool expected)
+        public void GetRole_SendRoleId_RoleSelected(int roleId, string displayName, bool expected)
         {
             var role = this._context.Roles.Single(p => p.RoleId == roleId);
-            Assert.AreEqual(expected, roleName.ToLower() == role.RoleName.ToLower());
+            Assert.AreEqual(expected, displayName.ToLower() == role.DisplayName.ToLower());
         }
 
         #endregion Select

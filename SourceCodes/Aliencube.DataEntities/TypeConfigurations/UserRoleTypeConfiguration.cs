@@ -4,9 +4,9 @@ using System.Data.Entity.ModelConfiguration;
 namespace Aliencube.DataEntities.TypeConfigurations
 {
     /// <summary>
-    /// This represents the configuration entity for the page type entity.
+    /// This represents the configuration entity for the user role.
     /// </summary>
-    public class UserRoleTypeConfiguration : EntityTypeConfiguration<UserRole>
+    public partial class UserRoleTypeConfiguration : EntityTypeConfiguration<UserRole>
     {
         #region Constructors
 
@@ -20,23 +20,25 @@ namespace Aliencube.DataEntities.TypeConfigurations
             //  Sets the auto increment and identity on UserRoleId.
             this.Property(p => p.UserRoleId).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
 
-            //this.Property(p => p.UserId).IsRequired();
-            //this.Property(p => p.RoleId).IsRequired();
-
             this.Property(p => p.IsGranted).IsRequired();
-            this.Property(p => p.DateAssigned).IsRequired();
-            this.Property(p => p.AssignedBy).IsRequired();
+            this.Property(p => p.DateGranted).IsRequired();
 
-            //  Sets the relation between User and UserRole.
+            //  Sets the relation between UserRole and User.
             this.HasRequired(p => p.User)
                 .WithMany(p => p.UserRoles)
                 .HasForeignKey(p => p.UserId)
                 .WillCascadeOnDelete();
 
-            //  Sets the relation between Role and UserRole.
+            //  Sets the relation between UserRole and Role.
             this.HasRequired(p => p.Role)
                 .WithMany(p => p.UserRoles)
                 .HasForeignKey(p => p.RoleId)
+                .WillCascadeOnDelete();
+
+            //  Sets the relation between UserRole and User that has granted this.
+            this.HasRequired(p => p.GrantedByUser)
+                .WithMany(p => p.UserRoles)
+                .HasForeignKey(p => p.GrantedBy)
                 .WillCascadeOnDelete();
         }
 

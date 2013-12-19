@@ -56,7 +56,7 @@ namespace Aliencube.DataEntities
         /// <summary>
         /// Gets or sets the user instance that has granted this.
         /// </summary>
-        public virtual User GrantedBy { get; set; }
+        public virtual User GrantedByUser { get; set; }
 
         #endregion Relations
     }

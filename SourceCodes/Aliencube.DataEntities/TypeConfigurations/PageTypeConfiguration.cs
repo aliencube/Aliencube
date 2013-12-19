@@ -4,7 +4,7 @@ using System.Data.Entity.ModelConfiguration;
 namespace Aliencube.DataEntities.TypeConfigurations
 {
     /// <summary>
-    /// This represents the configuration entity for the page type entity.
+    /// This represents the configuration entity for the page.
     /// </summary>
     public partial class PageTypeConfiguration : EntityTypeConfiguration<Page>
     {

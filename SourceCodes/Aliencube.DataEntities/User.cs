@@ -72,17 +72,17 @@ namespace Aliencube.DataEntities
         /// <summary>
         /// Gets or sets the user instance that has created this.
         /// </summary>
-        public virtual User CreatedBy { get; set; }
+        public virtual User CreatedByUser { get; set; }
 
         /// <summary>
         /// Gets or sets the user instance that has updated this.
         /// </summary>
-        public virtual User UpdatedBy { get; set; }
+        public virtual User UpdatedByUser { get; set; }
 
         /// <summary>
         /// Gets or sets the user instance that has verified this.
         /// </summary>
-        public virtual User VerifiedBy { get; set; }
+        public virtual User VerifiedByUser { get; set; }
 
         /// <summary>
         /// Gets or sets the list of page schema instances.

@@ -44,9 +44,29 @@ namespace Aliencube.DataAccessFramework
         #region Properties
 
         /// <summary>
-        /// Gets or sets a set of contents.
+        /// Gets or sets a set of element data types.
         /// </summary>
-        public DbSet<Content> Contents { get; set; }
+        public DbSet<ElementDataType> ElementDataTypes { get; set; }
+
+        /// <summary>
+        /// Gets or sets a set of element groups.
+        /// </summary>
+        public DbSet<ElementGroup> ElementGroups { get; set; }
+
+        /// <summary>
+        /// Gets or sets a set of element schemata.
+        /// </summary>
+        public DbSet<ElementSchema> ElementSchemata { get; set; }
+
+        /// <summary>
+        /// Gets or sets a set of groups.
+        /// </summary>
+        public DbSet<Group> Groups { get; set; }
+
+        /// <summary>
+        /// Gets or sets a set of group roles.
+        /// </summary>
+        public DbSet<GroupRole> GroupRoles { get; set; }
 
         /// <summary>
         /// Gets or sets a set of pages.
@@ -54,9 +74,34 @@ namespace Aliencube.DataAccessFramework
         public DbSet<Page> Pages { get; set; }
 
         /// <summary>
+        /// Gets or sets a set of page contents.
+        /// </summary>
+        public DbSet<PageContent> PageContents { get; set; }
+
+        /// <summary>
+        /// Gets or sets a set of page elements.
+        /// </summary>
+        public DbSet<PageElement> PageElements { get; set; }
+
+        /// <summary>
+        /// Gets or sets a set of page schemata.
+        /// </summary>
+        public DbSet<PageSchema> PageSchemata { get; set; }
+
+        /// <summary>
         /// Gets or sets a set of page URLs.
         /// </summary>
         public DbSet<PageUrl> PageUrls { get; set; }
+
+        /// <summary>
+        /// Gets or sets a set of page versions.
+        /// </summary>
+        public DbSet<PageVersion> PageVersions { get; set; }
+
+        /// <summary>
+        /// Gets or sets a set of pre-defined element data values.
+        /// </summary>
+        public DbSet<PredefinedElementDataValue> PredefinedElementDataValues { get; set; }
 
         /// <summary>
         /// Gets or sets a set of roles.
@@ -67,6 +112,11 @@ namespace Aliencube.DataAccessFramework
         /// Gets or sets a set of users.
         /// </summary>
         public DbSet<User> Users { get; set; }
+
+        /// <summary>
+        /// Gets or sets a set of user groups.
+        /// </summary>
+        public DbSet<UserGroup> UserGroups { get; set; }
 
         /// <summary>
         /// Gets or sets a set of user roles.
